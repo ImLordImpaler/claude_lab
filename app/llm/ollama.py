@@ -4,7 +4,7 @@ from app.config.settings import settings
 from app.llm.base import LLM 
 
 
-class Ollama(LLM):
+class OllamaInterface(LLM):
     def __init__(self):
         self.client = AsyncClient(host=settings.ollama_base_url)
         self.model = settings.llm_model
@@ -15,4 +15,4 @@ class Ollama(LLM):
             model=self.model,
             messages=messages,
         )
-        return response["messages"]["content"]
+        return response["message"]["content"]
