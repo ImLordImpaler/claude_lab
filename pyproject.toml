@@ -1,0 +1,21 @@
+[project]
+name = "claude-architect-lab"
+version = "0.1.0"
+description = "AI architecture learning laboratory"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "pydantic-settings",
+    "httpx",
+    "ollama",
+    "python-dotenv",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+]
